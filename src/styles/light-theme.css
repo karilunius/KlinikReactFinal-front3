@@ -9,7 +9,7 @@
 html,
 body,
 footer {
-	height: 100vh;
+	/* height: 80vh; */
 	display: flex;
 	justify-content: center;
 }
@@ -67,6 +67,7 @@ a:active {
 	font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
 		sans-serif;
 	font-weight: 300;
+	
 }
 
 .foot img {
@@ -177,6 +178,7 @@ a:active {
 	padding: 30px;
 	font-family: Roboto;
 	width: 1320px;
+/* 	height: 1300px; */
 }
 
 .containerhome h1 {
@@ -317,3 +319,4 @@ a:active {
   top: -15px;
   color: #0e5b92;
 }
+

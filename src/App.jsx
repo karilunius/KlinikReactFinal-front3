@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, Navigate, Router } from "react-router-dom";
-import { routes, Login } from "./navigate/Routes.js";
+import { rutas, Login } from "./navigate/Routes.js";
 import { ProtectedRoute } from './components/utils/Protected/ProtectedRoute.jsx';
 import LoginContextProvider from "../src/components/utils/context/loginContext.jsx";
 import Footer from "./components/gen/Footer.jsx";
 import Navbar from "./components/gen/Navbar.jsx";
-
+import { ThemeContext } from './components/utils/context/themecontext';
 
 const App = () => {
+
+   const { theme } = useContext(ThemeContext);
+
+
 	return (
-			<LoginContextProvider>
-				<BrowserRouter>
+		<LoginContextProvider>
+			<BrowserRouter>
+				<div className={theme ? "dark" : "app"}>
 					<Routes>
 						<Route path="/login" element={<Login />} />
 						<Route element={<ProtectedRoute />}>
-							{routes.map(({ id, path, Component }) => (
+							{rutas.map(({ id, path, Component }) => (
 								<Route
 									key={id}
 									path={path}
@@ -28,10 +33,11 @@ const App = () => {
 								/>
 							))}
 						</Route>
-						<Route path="/" element={<Navigate to="/login"/>} />
+						<Route path="/" element={<Navigate to="/login" />} />
 					</Routes>
-				</BrowserRouter>
-			</LoginContextProvider>
+				</div>
+			</BrowserRouter>
+		</LoginContextProvider>
 	);
 }
 

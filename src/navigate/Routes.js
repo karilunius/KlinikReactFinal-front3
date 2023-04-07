@@ -6,7 +6,7 @@ import Destacados from "../routes/Destacados";
 
 
 
-export const routes = [
+export const rutas = [
     {
         id:1,
         path: "/home",

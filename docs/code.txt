@@ -154,3 +154,12 @@ const { state, dispatch } = useContext(ContextGlobal);
 						outline: "none",
 					},
 				}} */
+
+
+
+				
+
+	/* const State = {
+		theme, //tiene bool =>llama al com que quiero
+		handleTheme, //=>lo maneja si es true ponlo false
+	}; */

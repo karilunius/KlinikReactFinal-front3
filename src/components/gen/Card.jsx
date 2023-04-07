@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../styles/light-theme.css";
 
 const Card = ({ name, phone,id, email, website }) => {
 	
@@ -13,16 +14,18 @@ const Card = ({ name, phone,id, email, website }) => {
 		<div className="card">
 			<h2>Desde la card</h2>
 			<div className="boxdedatoscard">
-			{/* 	<p>{item?.name}</p>
-				<p>{item?.phone}</p>
-				<p>{item?.email}</p>
-				<p>{item?.website}</p> */}
+				<p>{id}</p>
+				<p>{name}</p>
+				<p>{phone}</p>
+				<p>{email}</p>
+				<p>{website}</p> *
 			</div>
 			<Link to="/home">Regresar</Link>
 
 			<button onClick={addFav} className="favButton">
 				Add fav
 			</button>
+
 		</div>
 	);
 };
