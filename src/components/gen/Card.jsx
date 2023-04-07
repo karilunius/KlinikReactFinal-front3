@@ -13,13 +13,13 @@ const Card = ({ name, phone,id, email, website }) => {
 	return (
 		<div className="card">
 			<h2>Desde la card</h2>
-			<div className="boxdedatoscard">
+			{/* <div className="boxdedatoscard">
 				<p>{id}</p>
 				<p>{name}</p>
 				<p>{phone}</p>
 				<p>{email}</p>
 				<p>{website}</p> *
-			</div>
+			</div> */}
 			<Link to="/home">Regresar</Link>
 
 			<button onClick={addFav} className="favButton">

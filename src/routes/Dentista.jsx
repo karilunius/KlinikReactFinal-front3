@@ -28,19 +28,18 @@ const Dentista = () => {
 	return (
 		<div>
 			<h1>Datos de Dentista</h1>
-				{/* <div className="boxdedatoscard">
-					<p>{values?.id}</p>
-					<p>{values?.name}</p>
-					<p>{values?.phone}</p>
-					<p>{values?.email}</p>
-					<p>{values?.website}</p>
-				</div> */}
-				<Link to="/home">Regresar</Link>
+			<div className="boxdedatoscard">
+				<p>{values?.id}</p>
+				<p>{values?.name}</p>
+				<p>{values?.phone}</p>
+				<p>{values?.email}</p>
+				<p>{values?.website}</p>
+			</div>
 
-			{values?.map((item) => (
+			{/* 	{values?.map((item) => (
 				<Card key={item?.id} {...item} values={values} />
-			))}
-
+			))} */}
+			<Link to="/home">Regresar</Link>
 		</div>
 	);
 }
