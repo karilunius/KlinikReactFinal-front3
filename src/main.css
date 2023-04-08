@@ -1,11 +1,10 @@
 .dark {
 	background-color: #0a538f96;
-	color: white;
+	color: rgb(5, 63, 97);
     top:0;
-	height: 240vh;
 	padding: 0;
 	
 }
 .dark > a {
-	color: white;
+	color: rgb(25, 78, 148);
 }

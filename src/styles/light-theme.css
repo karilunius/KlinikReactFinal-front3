@@ -2,15 +2,13 @@
 
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 }
 
 html,
-body,
-footer {
-	/* height: 80vh; */
-	display: flex;
+body{
+	display:block;
 	justify-content: center;
 }
 
@@ -37,6 +35,7 @@ a:active {
 .login {
 	position: relative;
 	top: 150px;
+	left: 550px;
 	border: none;
 	box-shadow: 14px 14px 68px #a6dcf5, -14px -14px 68px #ffffff;
 }
@@ -53,15 +52,15 @@ a:active {
 /* COMPONENTE FOOTER */
 
 .foot {
-	/* background-color: #f4ecec; */
-	box-shadow: 5px 5px 36px #e7dbdb, -5px -5px 36px #ffffff;
+	background-color: white;
+	box-shadow: 5px 5px 36px #31a8df, -5px -5px 36px #c5e4f8;
 	position: fixed;
-	width: 98vw;
+
 	height: 10vw;
 	display: flex;
 	position: relative;
 	bottom: -70px;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	padding-left: 130px;
 	font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -89,15 +88,14 @@ a:active {
 /* COMPONENTE NAVBAR */
 
 .Navbar {
-	/* background-color: #f4ecec; */
-	box-shadow: 10px 10px 10px #f5efef, -10px -10px 10px #ffffff;
-	position: fixed;
-	width: 98vw;
+	background-color: #d9e7ec;
+/* 	box-shadow: 10px 10px 10px #f5efef, -10px -10px 10px #ffffff;
+ */	/* position: fixed; */
 	height: 5vw;
 	display: flex;
 	position: relative;
-	bottom: 30px;
-	margin-top: 50px;
+	bottom: -20px;
+	/* margin-top: 50px; */
 	justify-content: flex-start;
 	align-items: center;
 	padding-left: 130px;
@@ -115,7 +113,7 @@ a:active {
 
 
 .Navbar h5 {
-	color: rgb(125, 208, 241);
+	color: rgb(28, 130, 170);
 	font-family: Roboto;
 	padding: 50px;
 	font-weight: 600;
@@ -123,7 +121,7 @@ a:active {
 }
 
 .Navbar a:hover {
-	color: #1383df;
+	color: #1965a3;
 	cursor: pointer;
 	text-decoration: none;
 	font-weight: 700;
@@ -171,29 +169,40 @@ a:active {
 /* PAGINA HOME */
 
 .containerhome {
-	/* background-color:#8c63ec; */
+	/* background-color:#8c63ec */
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	padding: 30px;
+	padding: 25px;
+	padding-top: 35px;
 	font-family: Roboto;
 	width: 1320px;
-/* 	height: 1300px; */
+	
 }
 
 .containerhome h1 {
-	padding-bottom: 50px;
-	color: rgb(106, 206, 245);
+	background-color: white;
+	border-radius: 25px;
+	height: 23px;
+	width: 475px;
+	position:relative;
+	top: 25px;
+	left: 390px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	color: rgb(80, 89, 92);
 }
 
 .containerdoc {
-	box-shadow: 10px 10px 10px #f1eaea, -10px -10px 10px #faf6f6;
+	/* box-shadow: 10px 10px 10px #f1eaea, -10px -10px 10px #faf6f6; */
+	border: #0e5b92 dashed 1px;
 	display: flex;
 	flex-direction: row;
 	margin: 20px;
 	height: 70px;
 	border-radius: 50px;
 	align-items: center;
+	background-color: #f1eaea;
 }
 
 .containerdoc:hover {
@@ -228,24 +237,45 @@ a:active {
 /* sin completar diseño */
 /* PAGINA DE CONTACTOS*/
 
+.boxdecard{
+    height: 297px;
+}
+
+.boxdecard h1 {
+    background-color: white;
+	border-radius: 25px;
+	height: 23px;
+	width: 475px;
+	position:relative;
+	top: 45px;
+	left: 480px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	color: rgb(80, 89, 92);
+	text-align: center;
+}
+
 .boxcontactos {
 /* 	background-color: #1383df; */
-	height: 240px;
+
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
 	border-radius: 25px;
+	height: 297px;
 }
 
 .boxcont1 {
 	background-color: white;
-	box-shadow: 10px 10px 10px #f1eaea, -10px -10px 10px #faf6f6;
+	/* box-shadow: 10px 10px 10px #f1eaea, -10px -10px 10px #faf6f6; */
 	width: 300px;
 	height: 200px;
 	text-align: center;
 	border-radius: 25px;
+	position: relative;
+    top: 40px;
 }
 
 .boxcont1 p, .boxcont1 h2 {
@@ -257,12 +287,14 @@ a:active {
    display: flex;
    flex-direction: row;
    background-color: #b3d5fd;
-   box-shadow: 15px 15px 15px #f1eaea, -15px -15px 15px #faf6f6;
+ /*   box-shadow: 15px 15px 15px #f1eaea, -15px -15px 15px #faf6f6; */
    width: 770px;
    height: 200px;
    justify-content: space-evenly;
    align-items: center;
    border-radius: 25px;
+   position: relative;
+   top: 40px;
 }
 
 .formplaceholders{
@@ -320,3 +352,47 @@ a:active {
   color: #0e5b92;
 }
 
+/* .boxcontainercard{
+   display: flex;
+   flex-direction: row;
+   border-radius: 25px;
+   width: 700px;
+   height: 200px;
+   height: 250px;
+} */
+
+
+
+.card{
+   background-color: white;
+   border: #8c63ec dashed 1.5px;
+   display: flex;
+   flex-direction: row;
+   border-radius: 25px;
+   width: 700px;
+   height: 200px;
+   padding: 30px;
+   align-items: center;
+   justify-content: space-around;
+   position: relative;
+   top: 75px;
+   left: 300px;
+}
+
+.card img { 
+   width: 150px;
+   height: 150px;
+}
+
+.card-grid{
+    display: grid;
+	background-color: white;
+	border: #0e5b92 dashed 1px;
+	border-radius: 25px;
+	height: auto;
+	position: relative;
+	top: 35px;
+	left: 50px;
+	width: 1240px;
+	 
+}

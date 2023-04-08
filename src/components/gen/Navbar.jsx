@@ -28,13 +28,13 @@ const Navbar = () => {
 				<img src="./logo-n-b.jpg" alt="company-logo" />
 				<h5>DASHBOARD CLINIKA</h5>
 				<nav className="mul">
-					<Link style={{ color: "rgb(125, 208, 241)" }} to="/home">
+					<Link style={{ color: "gray" }} to="/home">
 						Home
 					</Link>
-					<Link style={{ color: "rgb(125, 208, 241)" }} to="/contactos">
+					<Link style={{ color: "gray" }} to="/contactos">
 						Contactos
 					</Link>
-					<Link style={{ color: "rgb(125, 208, 241)" }} to="/destacados">
+					<Link style={{ color: "gray" }} to="/destacados">
 						Favoritos
 					</Link>
 				</nav>

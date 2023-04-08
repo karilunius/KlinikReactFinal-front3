@@ -6,6 +6,8 @@ import LoginContextProvider from "../src/components/utils/context/loginContext.j
 import Footer from "./components/gen/Footer.jsx";
 import Navbar from "./components/gen/Navbar.jsx";
 import { ThemeContext } from './components/utils/context/themecontext';
+import FavsContextProvider from './components/utils/context/favsContext.jsx';
+
 
 const App = () => {
 
@@ -15,27 +17,29 @@ const App = () => {
 	return (
 		<LoginContextProvider>
 			<BrowserRouter>
-				<div className={theme ? "dark" : "app"}>
-					<Routes>
-						<Route path="/login" element={<Login />} />
-						<Route element={<ProtectedRoute />}>
-							{rutas.map(({ id, path, Component }) => (
-								<Route
-									key={id}
-									path={path}
-									element={
-										<>
-											<Navbar />
-											<Component />
-											<Footer />
-										</>
-									}
-								/>
-							))}
-						</Route>
-						<Route path="/" element={<Navigate to="/login" />} />
-					</Routes>
-				</div>
+				{/* <FavsContextProvider> */}
+					<div className={theme ? "dark" : "app"}>
+						<Routes>
+							<Route path="/login" element={<Login />} />
+							<Route element={<ProtectedRoute />}>
+								{rutas.map(({ id, path, Component }) => (
+									<Route
+										key={id}
+										path={path}
+										element={
+											<>
+												<Navbar />
+												<Component />
+												<Footer />
+											</>
+										}
+									/>
+								))}
+							</Route>
+							<Route path="/" element={<Navigate to="/login" />} />
+						</Routes>
+					</div>
+				{/* </FavsContextProvider> */}
 			</BrowserRouter>
 		</LoginContextProvider>
 	);

@@ -169,3 +169,17 @@ const { state, dispatch } = useContext(ContextGlobal);
 	{/* 	{values?.map((item) => (
 				<Card key={item?.id} {...item} values={values} />
 			))} */}
+
+
+			 const handleClick = () => {
+			let mifav = { nombre: "", edad: null };
+			localStorage.setItem("fav", JSON.stringify(values));
+	};
+	
+	const datoGuardado = localStorage.getItem(handleClick(values));
+	
+	const addFav = () => {
+		// Aqui iria la logica para agregar la Card en el localStorage
+		if (datoGuardado) {
+		alert("¡Se guardó el dato correctamente!");
+	    }

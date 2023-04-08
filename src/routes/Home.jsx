@@ -6,6 +6,7 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 export const endpoint = "https://jsonplaceholder.typicode.com/users";
 import { IconButton } from "@mui/material";
 import StarOutlineSharpIcon from "@mui/icons-material/StarOutlineSharp";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import "../styles/light-theme.css";
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
 						/>
 					</div>
 					<p>{item.name}</p>
-					<div className="iconstar">
+					{/* <div className="iconstar">
 						<IconButton>
 							<StarOutlineSharpIcon
 								sx={{
@@ -48,8 +49,18 @@ const Home = () => {
 								alt="like"
 							/>
 						</IconButton>
-					</div>
+					</div> */}
 					<div className="iconarrow">
+						<IconButton /* onClick={""}  */className="fav">
+							<FavoriteIcon
+								sx={{
+									fontSize: "40px",
+									cursor: "pointer",
+									color: "red",
+								}}
+								alt="like"
+							/>
+						</IconButton>
 						<Link to={`/users/${item.id}`}>
 							<IconButton>
 								<ArrowCircleRightIcon

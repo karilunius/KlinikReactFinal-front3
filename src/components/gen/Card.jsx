@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { endpoint } from "../../../src/routes/Home";
 import axios from "axios";
+import { IconButton } from "@mui/material";
 import "../../styles/light-theme.css";
+import StarOutlineSharpIcon from "@mui/icons-material/StarOutlineSharp";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { FavsContext } from "../utils/context/favsContext";
 
 const Card = () => {
 	
     const { id } = useParams();
 	const [values, setValues] = useState(null);
-	
-	
 
 		useEffect(() => {
 			axios
@@ -23,27 +25,52 @@ const Card = () => {
 				});
 		}, []); 
 
+	
+    //fav logic
+	
 
+	/* const {state,dispatch} = useContext(FavsContext);
+    
+    
 	const addFav = () => {
-		// Aqui iria la logica para agregar la Card en el localStorage
-	};
+		dispatch({type: "LIKEADDED", payload: { name, username, id }}
+	
+	);
+    console.log(state); */
 
+	//
+		
+		
 	return (
-		<div className="card">
-			<h2>Desde la card</h2>
-			<div className="boxdedatoscard">
-				<p>{values?.id}</p>
-				<p>{values?.name}</p>
-				<p>{values?.phone}</p>
-				<p>{values?.email}</p>
-				<p>{values?.website}</p> 
+		<div className="boxdecard">
+			<div className="card">
+				<h2>Datos de dentista</h2>
+				<img src="../../../public/doctor.jpg" alt="company-logo" />
+				<div className="boxdedatoscard">
+					<p>{values?.id}</p>
+					<p>{values?.name}</p>
+					<p>{values?.phone}</p>
+					<p>{values?.email}</p>
+					<p>{values?.website}</p>
+					<button>
+						<Link to="/home">Regresar</Link>
+					</button>
+				</div>
+				{/* 
+
+			<Link className="favButton">Add fav</Link> */}
+
+				<IconButton /* onClick={addFav} */ className="fav">
+					<FavoriteIcon
+						sx={{
+							fontSize: "40px",
+							cursor: "pointer",
+							color: "red",
+						}}
+						alt="like"
+					/>
+				</IconButton>
 			</div>
-			<Link to="/home">Regresar</Link>
-
-			<button onClick={addFav} className="favButton">
-				Add fav
-			</button>
-
 		</div>
 	);
 };
