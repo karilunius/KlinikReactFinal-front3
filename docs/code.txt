@@ -163,3 +163,9 @@ const { state, dispatch } = useContext(ContextGlobal);
 		theme, //tiene bool =>llama al com que quiero
 		handleTheme, //=>lo maneja si es true ponlo false
 	}; */
+
+
+
+	{/* 	{values?.map((item) => (
+				<Card key={item?.id} {...item} values={values} />
+			))} */}
