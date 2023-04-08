@@ -183,3 +183,80 @@ const { state, dispatch } = useContext(ContextGlobal);
 		if (datoGuardado) {
 		alert("¡Se guardó el dato correctamente!");
 	    }
+
+
+
+
+		PENDEJEANDO CON LIKES 
+
+		{like && color ? (
+					<IconButton className="fav" onClick={handleLike}>
+						<FavoriteIcon
+							sx={{
+								fontSize: "40px",
+								cursor: "pointer",
+								color: { color },
+							}}
+							alt="like"
+						/>
+					</IconButton>
+				) : (
+					<IconButton className="fav" onClick={handleLike}>
+						<FavoriteIcon
+							sx={{
+								fontSize: "40px",
+								cursor: "pointer",
+								color: { color },
+							}}
+							alt="like"
+						/>
+					</IconButton>
+				)}
+
+				const handleLike = (e) => {
+		e.preventDefault();
+				if (handleLike) {
+					setLike(true)
+					setColor("red")
+				} else {
+					setLike(false)
+					setColor("gray")
+				}
+
+		console.log(like);
+		console.log(color);
+		
+	};
+
+
+
+	switch
+
+	const handleLike = (e) => {
+		e.preventDefault();
+		switch (true) {
+			case like === false && color === "gray":
+				setLike(true);
+				setColor("red");
+				setFav(values);
+				break;
+			case like === true && color === "red":
+				setLike(false);
+				setColor("gray");
+			    setFav(values);
+				break;
+			default:
+				setLike(false);
+				setColor("gray");
+				setFav(null);
+				break;
+		}
+
+		console.log(like);
+		console.log(color);
+		console.log(values);
+		console.log(fav);
+		
+	};
+
+

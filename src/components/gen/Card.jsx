@@ -6,11 +6,14 @@ import { IconButton } from "@mui/material";
 import "../../styles/light-theme.css";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { FavsContext } from "../utils/context/favsContext";
+import { initialState } from "./../utils/context/globalcontext";
+import Destacados from "../../routes/Destacados";
 
 const Card = () => {
-
 	const { id } = useParams();
 	const [values, setValues] = useState(null);
+	const [like, setLike] = useState(false);
+	const [color, setColor] = useState("gray");
 
 	useEffect(() => {
 		axios
@@ -24,8 +27,30 @@ const Card = () => {
 			});
 	}, []);
 
+	
+
+	const handleLike = (e) => {
+		e.preventDefault();
+
+		if (like === false && color === "gray") {
+			setLike(true);
+			setColor("red");
+		} else if (like === true && color === "red") {
+			setLike(false);
+			setColor("gray");
+		} else {
+			setLike(false);
+			setColor("gray");
+		}
+
+			console.log(like);
+			console.log(color);
+	};
+
+    
+
 	return (
-		<div className="boxdecard">
+		<div className="boxdecard" >
 			<div className="card">
 				<h2>Datos de dentista</h2>
 				<img src="../../../public/doctor.jpg" alt="company-logo" />
@@ -39,16 +64,29 @@ const Card = () => {
 						<Link to="/home">Regresar</Link>
 					</button>
 				</div>
-					<IconButton className="fav">
+				{like && color ? (
+					<IconButton className="fav" onClick={handleLike}>
 						<FavoriteIcon
 							sx={{
 								fontSize: "40px",
 								cursor: "pointer",
-								color: "gray",
+								color: { color },
 							}}
 							alt="like"
 						/>
 					</IconButton>
+				) : (
+					<IconButton className="fav" onClick={handleLike}>
+						<FavoriteIcon
+							sx={{
+								fontSize: "40px",
+								cursor: "pointer",
+								color: { color },
+							}}
+							alt="like"
+						/>
+					</IconButton>
+				)}
 			</div>
 		</div>
 	);
@@ -56,7 +94,13 @@ const Card = () => {
 
 export default Card;
 
-
+{
+	/* {(like && (console.log("me gusta"), true)) ||
+						console.log("no me gusta")} */
+}
+{
+	/* {like} */
+}
 
 /* const Card = () => {
 	const { id } = useParams();

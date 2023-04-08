@@ -24,8 +24,7 @@ const Home = () => {
 			});
 	}, []);
 
-    console.log(values);
-
+	console.log(values);
 	return (
 		<div className="containerhome">
 			<h1>Listado de Dentistas</h1>
