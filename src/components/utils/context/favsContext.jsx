@@ -13,7 +13,7 @@ const handleFavs = (state, action) => {
 			return { ...state, data: [...state.data, action.payload] };
 		case "DISLIKE":
 			const resultado = state.data.filter(
-				(favs) => favs.id !== action.payload.id
+				favs => favs.id !== action.payload.id
 			);
 			sessionStorage.setItem("fav", JSON.stringify(resultado));
 			return {
@@ -21,12 +21,12 @@ const handleFavs = (state, action) => {
 				data: resultado,
 			};
 		default:
-			return { ...state };
+			return { ...state};
 	}
 };
 
 const FavsContextProvider = ({ children }) => {
-	const initialState = { data: [] };
+	const initialState = {data: []};
 
 	const [state, dispatch] = useReducer(handleFavs, initialState);
 

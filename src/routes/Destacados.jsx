@@ -4,10 +4,10 @@ import { FavsContext } from "../components/utils/context/favsContext.jsx";
 
 
 
-const Destacados = ({id,name,phone,email,website}) => {
+const Destacados = (/* {id,name,phone,email,website} */) => {
 
 
-	const { state } = useContext(FavsContext);
+	/* const { state, dispatch } = useContext(FavsContext); */
 
 
 
@@ -16,16 +16,15 @@ const Destacados = ({id,name,phone,email,website}) => {
 			<h1>Dentistas Favoritos</h1>
 			<div className="card-grid">
 				<div>hola</div>
-				{
-				/* {
+				{/* {
 					state.data?.map((data) => (
 						<>
 							<p>{data.id}</p>
 							<div className="boxdedatoscard">
-								<p>{name}</p>
-								<p>{phone}</p>
-								<p>{email}</p>
-								<p>{website}</p>
+								<p>{data.name}</p>
+								<p>{data.phone}</p>
+								<p>{data.email}</p>
+								<p>{data.website}</p>
 								<button>
 									<Link to="/home">Regresar</Link>
 								</button>
