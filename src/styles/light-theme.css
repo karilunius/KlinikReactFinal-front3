@@ -238,7 +238,7 @@ a:active {
 /* PAGINA DE CONTACTOS*/
 
 .boxdecard{
-    height: 297px;
+    height: 440px;
 }
 
 .boxdecard h1 {
@@ -389,10 +389,11 @@ a:active {
 	background-color: white;
 	border: #0e5b92 dashed 1px;
 	border-radius: 25px;
-	height: auto;
+	height: 250px;
 	position: relative;
 	top: 35px;
 	left: 50px;
 	width: 1240px;
+	color: #0e5b92;
 	 
 }

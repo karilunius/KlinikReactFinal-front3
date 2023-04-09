@@ -1,23 +1,10 @@
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-/* export const endpoint1 = "https://jsonplaceholder.typicode.com/users/:id"; */
 import { endpoint } from "./Home";
 import axios from "axios";
 import "../styles/light-theme.css";
-import Card from "../components/gen/Card";
 
 const Dentista = () => {
-	
-	return <Card></Card>;
-
-}
-export default Dentista;
-
-
-
-
-/* const Dentista = () => {
-
 	const { id } = useParams();
 
 	const [values, setValues] = useState(null);
@@ -33,20 +20,24 @@ export default Dentista;
 			});
 	}, []);
 
-
 	return (
-		<div>
-			<h1>Datos de Dentista</h1>
-			<div className="boxdedatoscard">
-				<p>{values?.id}</p>
-				<p>{values?.name}</p>
-				<p>{values?.phone}</p>
-				<p>{values?.email}</p>
-				<p>{values?.website}</p>
+		<div className="boxdecard">
+			<div className="card">
+				<h2>Datos de dentista</h2>
+				<img src="../../../public/doctor.jpg" alt="company-logo" />
+				<div className="boxdedatoscard">
+					<p>{values?.id}</p>
+					<p>{values?.name}</p>
+					<p>{values?.phone}</p>
+					<p>{values?.email}</p>
+					<p>{values?.website}</p>
+					<button>
+						<Link to="/home">Regresar</Link>
+					</button>
+				</div>
 			</div>
-			<Link to="/home">Regresar</Link>
 		</div>
 	);
+};
 
-}
-export default Dentista; */
+export default Dentista;

@@ -6,6 +6,7 @@ import LoginContextProvider from "../src/components/utils/context/loginContext.j
 import Footer from "./components/gen/Footer.jsx";
 import Navbar from "./components/gen/Navbar.jsx";
 import { ThemeContext } from './components/utils/context/themecontext';
+import FavsContextProvider from './components/utils/context/FavsContext.jsx';
 
 
 
@@ -16,7 +17,8 @@ const App = () => {
 
 	return (
 		<LoginContextProvider>
-			<BrowserRouter>
+			<FavsContextProvider>
+				<BrowserRouter>
 					<div className={theme ? "dark" : "app"}>
 						<Routes>
 							<Route path="/login" element={<Login />} />
@@ -38,7 +40,8 @@ const App = () => {
 							<Route path="/" element={<Navigate to="/login" />} />
 						</Routes>
 					</div>
-			</BrowserRouter>
+				</BrowserRouter>
+			</FavsContextProvider>
 		</LoginContextProvider>
 	);
 }

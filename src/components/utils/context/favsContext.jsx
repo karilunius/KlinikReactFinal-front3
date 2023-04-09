@@ -5,28 +5,27 @@ export const FavsContext = createContext({});
 const handleFavs = (state, action) => {
 	switch (action.type) {
 		case "LIKEADDED":
-			sessionStorage.setItem(
+			localStorage.setItem(
 				"fav",
 				JSON.stringify([...state.data, action.payload])
 			);
-			console.log("me gusta");
 			return { ...state, data: [...state.data, action.payload] };
 		case "DISLIKE":
 			const resultado = state.data.filter(
-				favs => favs.id !== action.payload.id
+				(favs) => favs.id !== action.payload.id
 			);
-			sessionStorage.setItem("fav", JSON.stringify(resultado));
+			localStorage.setItem("fav", JSON.stringify(resultado));
 			return {
 				...state,
 				data: resultado,
 			};
 		default:
-			return { ...state};
+			return { ...state };
 	}
 };
 
 const FavsContextProvider = ({ children }) => {
-	const initialState = {data: []};
+	const initialState = {data:[]};
 
 	const [state, dispatch] = useReducer(handleFavs, initialState);
 

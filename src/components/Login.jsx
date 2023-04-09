@@ -10,7 +10,6 @@ const Login = () => {
 
 
 	const [values, setValues] = useState({ email: "", password: "" });
-
 	const { handleLogin } = useContext(LoginContext);
 	
 	//instanciarlo
@@ -28,9 +27,6 @@ const Login = () => {
 		<Box
 			className="login"
 			component="form"
-			/* sx={{
-				display: "flex", flexDirection: "column", gap: "20px", width: "25vw"
-			}} */
 			onSubmit={handleSubmit}
 		>
 			<h2>LOGIN</h2>

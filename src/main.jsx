@@ -4,7 +4,6 @@ import App from './App'
 import '../src/styles/light-theme.css'
 import "../src/main.css"
 import ThemeContextProvider from './components/utils/context/themecontext'
-import FavsContextProvider from './components/utils/context/favsContext'
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -14,13 +13,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 			</ThemeContextProvider>
 	</React.StrictMode>
 );
-
-/* ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
-		<FavsContextProvider>
-		<ThemeContextProvider>
-			<App />
-		</ThemeContextProvider>
-		</FavsContextProvider>
-	</React.StrictMode>
-); */

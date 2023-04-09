@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 export const endpoint = "https://jsonplaceholder.typicode.com/users";
-import { IconButton } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import "../styles/light-theme.css";
+import Card from "../components/gen/Card";
 
 const Home = () => {
 
 
-	const [values, setValues] = useState(null);
+	const [values, setValues] = useState([]);
 
 	useEffect(() => {
 		axios
@@ -25,37 +21,27 @@ const Home = () => {
 	}, []);
 
 	console.log(values);
+
 	return (
 		<div className="containerhome">
 			<h1>Listado de Dentistas</h1>
-			{values?.map((item) => (
-				<div key={item.id} className="containerdoc">
-					<div className="iconprofile">
-						<AccountCircleIcon
-							sx={{ fontSize: "40px", color: "rgb(125, 208, 241)" }}
-							className="imgperfil"
-							alt="foto"
-						/>
-					</div>
-					<p>{item.name}</p>
-					<div className="iconarrow">
-						<Link to={`/users/${item.id}`}>
-							<IconButton>
-								<ArrowCircleRightIcon
-									sx={{
-										fontSize: "40px",
-										cursor: "pointer",
-										color: "rgb(125, 208, 241)",
-									}}
-									alt="foto"
-								/>
-							</IconButton>
-						</Link>
-					</div>
-				</div>
-			))}
+			{values.length ? values?.map((item) => (
+				<Card
+					key={item.id}
+					name={item.name}
+					username={item.username}
+					id={item.id}
+					phone={item.phone}
+					email={item.email}
+					website={item.website}
+				
+				/>))
+					: null
+			}
 		</div>
 	);
 };
 
 export default Home;
+
+
