@@ -173,7 +173,7 @@ a:active {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	padding: 25px;
+	padding: 35px;
 	padding-top: 35px;
 	font-family: Roboto;
 	width: 1320px;
@@ -187,7 +187,7 @@ a:active {
 	width: 475px;
 	position:relative;
 	top: 25px;
-	left: 390px;
+	left: 420px;
 	padding-bottom: 40px;
 	margin-bottom: 40px;
 	color: rgb(80, 89, 92);
@@ -238,10 +238,13 @@ a:active {
 /* PAGINA DE CONTACTOS*/
 
 .boxdecard{
-    height: 440px;
+    height: auto;
+	display:flex;
+	flex-direction: column;
+	
 }
 
-.boxdecard h1 {
+.boxdecard h1{
     background-color: white;
 	border-radius: 25px;
 	height: 23px;
@@ -255,6 +258,16 @@ a:active {
 	text-align: center;
 }
 
+.boxdecard2{
+
+   background-color: #79b7e4;
+   border-radius: 15px;
+   height: auto;
+   width: auto;
+   margin: 15px;
+   padding: 15px;
+
+}
 .boxcontactos {
 /* 	background-color: #1383df; */
 
@@ -384,16 +397,18 @@ a:active {
    height: 150px;
 }
 
-.card-grid{
-    display: grid;
+.card-f{
+    display: flex;
+	padding: 10px;
 	background-color: white;
 	border: #0e5b92 dashed 1px;
 	border-radius: 25px;
-	height: 250px;
+	height: auto;
 	position: relative;
 	top: 35px;
 	left: 50px;
 	width: 1240px;
 	color: #0e5b92;
+	margin: 10px;
 	 
 }

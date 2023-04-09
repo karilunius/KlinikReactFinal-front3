@@ -13,21 +13,26 @@ const Destacados = () => {
 	return (
 		<div className="boxdecard">
 			<h1>Dentistas Favoritos</h1>
-			<div className="card-grid">
+			<div className="card-f">
 				<>
 					{state.data?.map((data) => (
-						<div key={data.id} className="boxdedatoscard">
-							<p>{data?.id}</p>
-							<p>{data?.name}</p>
-							<p>{data?.phone}</p>
-							<p>{data?.email}</p>
-							<p>{data?.website}</p>
+						<div key={data.id} className="boxdecard2">
+							<div>
+								<p>{data?.id}</p>
+								<p>{data?.name}</p>
+								<p>{data?.phone}</p>
+								<p>{data?.email}</p>
+								<p>{data?.website}</p>
+							</div>
 						</div>
 					))}
 				</>
 			</div>
 			<Button
-				sx={{ marginTop: "10px", backgroundColor: "dodgerblue" }}
+				sx={{ margin: "50px", backgroundColor: "gray",
+					"&:hover": {
+						backgroundColor: "dodgerblue",
+					},borderRadius:"10px",width:"120px" }}
 				type="submit"
 				size="small"
 			>

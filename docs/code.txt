@@ -260,3 +260,7 @@ const { state, dispatch } = useContext(ContextGlobal);
 	};
 
 
+backgroundColor: "gray",
+					"&:hover": {
+						backgroundColor: "dodgerblue",
+					},

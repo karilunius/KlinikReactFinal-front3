@@ -1,53 +1,30 @@
-# ctd-fe3-final
+# Marcos 16:6
 
 Examen Final de Frontend III
 
 ## Indice
 
 - [Requisitos](#requisitos)
-  - [Condiciones mínimas de aprobación](#condiciones-mínimas-de-aprobación)
-  - [Aspectos que modifican la valoración final de la nota](#aspectos-que-modifican-la-valoración-final-de-la-nota)
-- [Funcionalidades](#funcionalidades)
-- [Desarrollo](#desarrollo)
-- [API](#api)
-- [Entrega](#entrega)
-  - [Fecha de Entrega](#fecha-de-entrega)
-  - [Formato de Entrega](#formato-de-entrega)
 
-## Requisitos
 
-Es indispensable clonar este proyecto en un repositorio privado, para poder trabajar de forma _individual_ o en _dupla_. No se aceptarán proyectos que se hayan realizado sin partir de este template. Para eso deberás crear un repositorio con el nombre "ctd-esp-fe3-final" en tu cuenta de Github y luego seguir los siguientes pasos en tu terminal
+## Sobre el proyecto
 
 ```
+# Se utilizo Vitejs react.
+
 # clona el repositorio del final en tu computadora
-git clone https://github.com/Frontend-III/fe3-final
+git clone  https://github.com/karilunius/KlinikReactFinal-front3.git
 
-# ingresa al directorio del final
-cd fe3-final
-
-# elimina los links al repositorio de DH
+# elimina los links al repositorio 
 git remove remote origin
 
-# Agrega el link al repositorio de tu cuenta de github, reemplaza <tuusuario> por tu cuenta
-git remote add origin https://github.com/<tuusuario>/fe3-final
+# debes instalar npm, usa el comando: npm install
 
-# Sube el template inicial a tu repositorio de github
-git push -u origin main
+# ejecuta con comando: npm run dev
 ```
 
-### Condiciones de aprobación
-
-Las siguientes condiciones son requisitos mínimos necesarios para la aprobación del final:
-
-- **Cumplir con todas las funcionalidades obligatorias**
-- Solo se podrán utilizar las librerías que se detallan en este README. Ver [Dependencias](docs/desarrollo.md#dependencias)
-- No se considerará realizada cualquier funcionalidad que sea implementada utilizando una librería distinta a las permitidas.
-- Deberá ser desarrollada utilizando Javascript con React.js como libreria.
-- Se espera que la página de Contacto, contenga los flujos de validación necesarios (minimo 2 validaciones), para un correcto submit del formulario.
-- En los casos en que se requiera dar estilos a componentes, deberá realizarse teniendo en cuenta el theme del contexto global.
-
-### Aspectos que modifican la valoración final de la nota
-
+### Aspectos del proyecto
+```
 Los siguientes aspectos son extras al requisito mínimo de aprobación que serán tenidos en cuenta para aumentar la nota final, siempre y cuando su implementación sea correcta:
 
 **Validaciones**
@@ -69,26 +46,62 @@ Los siguientes aspectos son extras al requisito mínimo de aprobación que será
 
 ## Funcionalidades
 
-Ver [Funcionalidades](docs/funcionalidades.md).
 
 ## Desarrollo
 
-Ver [Desarrollo](docs/desarrollo.md).
-
 ## API
 
-La API a utilizar sera la siguiente:
+Las API utilizadas fueron las siguiente:
 `https://jsonplaceholder.typicode.com/users`
 
-Y para cada dentista en especifico:
+
 `https://jsonplaceholder.typicode.com/users/:id`
+```
+## Estructura
+La estructura trat? de basarse en la plantilla original dada.
+- proyecto
+  - node_modules
+  - public
+    - logo-n-b.jpg
+    - logoklinik.jpg
+    - profiledoctor.jpg
+  - src
+    - componentes
+      -gen
+        - Card.jsx
+        - Footer.jsx
+        - Form.jsx
+        - Navbar.jsx
+      -utils
+        -context
+          -globalcontext.jsx
+          -logincontext.jsx
+          -themecontext.jsx
+        -Protected
+          -ProtectedRouter.jsx
+      -Login.jsx
+    - navigate
+      - Routes.js
+    - routes
+      - Contactos.jsx
+      - Dentista.jsx
+      - Destacados.jsx
+      - Home.jsx
+    - styles
+      - dark-theme.css
+      - light-theme.css
+      - theme.css
+    - App.jsx
+    - main.jsx
+    - .gitignore
+    - package-lock.json
+    - package.json
+    - README.md
+    - vite.config.js
+  - package-lock.json
 
-### Formato de Entrega
+### Sobre el formato de Entrega
 
-- No deberan cambiar los nombres ni ubicacion de las variables/componentes/context que vienen con el repo base
+- Tuve en cuenta la plantilla base entregada, pero debido a que hice un traslado de datos a un proyecto de vite, quise darle un estilo visual más personal.
 
-Se aceptará la entrega mediante la submisión de la URL de su repositorio clonado
-
-El link al Google Form para la submisión será enviado por el profesor a cargo de la comisión.
-
-Mucha suerte y éxitos!
+```
