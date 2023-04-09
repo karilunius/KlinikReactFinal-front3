@@ -233,9 +233,10 @@ a:active {
     height: auto;
 	display:flex;
 	flex-direction: column;
-	
 }
-
+.boxdecard1{
+   height: 297px;
+}
 .boxdecard h1{
     background-color: white;
 	border-radius: 25px;
@@ -378,6 +379,8 @@ a:active {
 
 .card-f{
     display: flex;
+	flex-wrap: wrap;
+	justify-content:space-evenly;
 	padding: 10px;
 	background-color: white;
 	border: #0e5b92 dashed 1px;

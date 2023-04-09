@@ -21,7 +21,7 @@ const Dentista = () => {
 	}, []);
 
 	return (
-		<div className="boxdecard">
+		<div className="boxdecard1">
 			<div className="card">
 				<h2>Datos de dentista</h2>
 				<img src="../../../public/doctor.jpg" alt="company-logo" />
