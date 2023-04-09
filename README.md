@@ -21,23 +21,23 @@ git remove remote origin
 
 ## Aspectos del proyecto
 
-- Se consider? la mayoria de lo dispuesto en el .doc de entrega final: 
+- Se considero la mayoria de lo dispuesto en el .doc de entrega final: 
 https://docs.google.com/document/d/1ewex1MkKkmz3Je10heISh9u8-Fcno0UT16Ne7XB7cHg/edit
 
 **Contexto**
 - Se uso de la carpeta Context el archivo themecontext.jsx para el boton de claro / oscuro en la app.
-- Se implement? un contexto para el login.
-- Se implement? un contexto para los clicks de favoritos.
+- Se implemento un contexto para el login.
+- Se implemento un contexto para los clicks de favoritos.
 
 **Rutas**
 
 - /home
-Se presenta la lista r?pida de dentistas.
+Se presenta la lista rapida de dentistas.
 - /home/users{id}
 Se uso segun la ruta de API dada. Muestra la informacion en detalle de cada dentista.
 - /home/contactos/
 Se muestra un forms para rellenar los datos para mas imformacion. 
-La validaci?n es muy basica:
+La validacion es muy basica:
     - para nombre
 si es valido seria sobre Es Igual y Mayor a 3 caracteres.
 si no es valido seria menor a 3 caracteres.
@@ -48,14 +48,14 @@ no se uso validacion de regex
 
 Si todo se encuentra validado presentar? un mensaje:
 
-Si algo no es validado presentar? un mensaje:
+Si algo no es validado presentara un mensaje:
 
 **Destacados o favs**
 - Se uso ruta /home/destacados para renderizar las cards que den favorito desde el home, y se guadan en el localstorage
 
 **Estilos**
 
-- Se uso el archivo light-theme.css para este proyecto.Los otros archivos .css se trato de crear un theme con la idea de que al dar click en el boton cargue un estilo u otro pero no se logr?.
+- Se uso el archivo light-theme.css para este proyecto.Los otros archivos .css se trato de crear un theme con la idea de que al dar click en el boton cargue un estilo u otro pero no se logro.
 
 
 ## API
@@ -67,7 +67,7 @@ Las API utilizadas fueron las siguiente:
 `https://jsonplaceholder.typicode.com/users/:id`
 ```
 ## Estructura
-La estructura trat? de basarse en la plantilla original dada.
+La estructura trato de basarse en la plantilla original dada.
 - proyecto
   - node_modules
   - public
@@ -113,6 +113,8 @@ La estructura trat? de basarse en la plantilla original dada.
 
 ### Sobre el formato de Entrega
 
-- Tuve en cuenta la plantilla base entregada, pero debido a que hice un traslado de datos a un proyecto de vite, quise darle un estilo visual más personal.
+- Tuve en cuenta la plantilla base entregada, pero debido 
+a que hice un traslado de datos a un proyecto de vite, 
+quise darle un estilo visual más personal.
 
 ```
