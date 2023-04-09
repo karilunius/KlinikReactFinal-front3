@@ -87,10 +87,8 @@ a:active {
 
 /* COMPONENTE NAVBAR */
 
-.Navbar {
+.navbar {
 	background-color: #d9e7ec;
-/* 	box-shadow: 10px 10px 10px #f5efef, -10px -10px 10px #ffffff;
- */	/* position: fixed; */
 	height: 5vw;
 	display: flex;
 	position: relative;
@@ -105,14 +103,14 @@ a:active {
 	text-decoration: none;
 }
 
-.Navbar img {
+.navbar img {
 	width: 50px;
 	height: 50px;
 	border-radius: 99%;
 }
 
 
-.Navbar h5 {
+.navbar h5 {
 	color: rgb(28, 130, 170);
 	font-family: Roboto;
 	padding: 50px;
@@ -120,14 +118,14 @@ a:active {
 	font-size: medium;
 }
 
-.Navbar a:hover {
+.navbar a:hover {
 	color: #1965a3;
 	cursor: pointer;
 	text-decoration: none;
 	font-weight: 700;
 }
 
-.mul {
+.navlinks {
 	display: flex;
 	justify-content: space-between;
 	list-style-type: none;
@@ -136,10 +134,9 @@ a:active {
 }
 
 
-.icons {
+.navicons {
 	display: flex;
 	justify-content: space-between;
-	/* background-color: #8c63ec; son de navbar*/
 	padding-left: 115px;
 	width: 260px;
 }
@@ -169,7 +166,6 @@ a:active {
 /* PAGINA HOME */
 
 .containerhome {
-	/* background-color:#8c63ec */
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -193,8 +189,10 @@ a:active {
 	color: rgb(80, 89, 92);
 }
 
+
+/*PAGINA CARD */
+
 .containerdoc {
-	/* box-shadow: 10px 10px 10px #f1eaea, -10px -10px 10px #faf6f6; */
 	border: #0e5b92 dashed 1px;
 	display: flex;
 	flex-direction: row;
@@ -222,20 +220,14 @@ a:active {
 	position: relative;
 	left: 85px;
 }
-.iconstar {
-	/* background-color: #1383df; */
-	position: relative;
-	left: 750px;
-}
+
 .iconarrow {
-	/*   background-color: #8c63ec; */
 	position: relative;
 	left: 750px;
 }
 
 
-/* sin completar diseño */
-/* PAGINA DE CONTACTOS*/
+/* PAGINA DE DESTACADOS*/
 
 .boxdecard{
     height: auto;
@@ -268,6 +260,9 @@ a:active {
    padding: 15px;
 
 }
+
+/*PAGINA DE CONTACTOS*/
+
 .boxcontactos {
 /* 	background-color: #1383df; */
 
@@ -296,11 +291,13 @@ a:active {
 	top: 73px;
 }
 
+
+/*Archivo de form*/
+
 #form{
    display: flex;
    flex-direction: row;
    background-color: #b3d5fd;
- /*   box-shadow: 15px 15px 15px #f1eaea, -15px -15px 15px #faf6f6; */
    width: 770px;
    height: 200px;
    justify-content: space-evenly;
@@ -316,7 +313,6 @@ a:active {
    border-radius: 20px;
    border: none;
    text-align:left;
-   /* margin: 25px; */
 
 }
 
@@ -348,13 +344,6 @@ a:active {
   background-color: #0e5b92;
 }
 
-/* .formsmsbox{
-   background-color: #a6dcf5;
-   text-align: center;
-   width: 370px;
-   height: 200px;
-   border-radius: 25px;
-} */
 .formsmsbox{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 300;
@@ -364,16 +353,6 @@ a:active {
   top: -15px;
   color: #0e5b92;
 }
-
-/* .boxcontainercard{
-   display: flex;
-   flex-direction: row;
-   border-radius: 25px;
-   width: 700px;
-   height: 200px;
-   height: 250px;
-} */
-
 
 
 .card{

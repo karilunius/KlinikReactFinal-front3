@@ -1,16 +1,12 @@
-# Marcos 16:6
+##### Marcos 16:6
 
-Examen Final de Frontend III
-
-## Indice
-
-- [Requisitos](#requisitos)
-
+# Examen Final de Frontend III
 
 ## Sobre el proyecto
 
 ```
-# Se utilizo Vitejs react.
+# Se utilizo Vitejs react.Se uso Axios, React-router
+ui-material, uimaterialicon
 
 # clona el repositorio del final en tu computadora
 git clone  https://github.com/karilunius/KlinikReactFinal-front3.git
@@ -23,31 +19,44 @@ git remove remote origin
 # ejecuta con comando: npm run dev
 ```
 
-### Aspectos del proyecto
-```
-Los siguientes aspectos son extras al requisito mínimo de aprobación que serán tenidos en cuenta para aumentar la nota final, siempre y cuando su implementación sea correcta:
+## Aspectos del proyecto
 
-**Validaciones**
+- Se consider? la mayoria de lo dispuesto en el .doc de entrega final: 
+https://docs.google.com/document/d/1ewex1MkKkmz3Je10heISh9u8-Fcno0UT16Ne7XB7cHg/edit
 
-- Una validación para cada campor es suficiente, pueden ser "manuales" o con expreciones regulares. Lo importante es el correcto manejo de errores y submit.
+**Contexto**
+- Se uso de la carpeta Context el archivo themecontext.jsx para el boton de claro / oscuro en la app.
+- Se implement? un contexto para el login.
+- Se implement? un contexto para los clicks de favoritos.
 
-**Funcionalidad de destacados**
+**Rutas**
 
-- Se valorará funcionalidades extra a esta feature, como lo pueden ser el eliminar de destacadados, manejo de errores al intentar agregar repetidos y reseteo total de los destacados.
+- /home
+Se presenta la lista r?pida de dentistas.
+- /home/users{id}
+Se uso segun la ruta de API dada. Muestra la informacion en detalle de cada dentista.
+- /home/contactos/
+Se muestra un forms para rellenar los datos para mas imformacion. 
+La validaci?n es muy basica:
+    - para nombre
+si es valido seria sobre Es Igual y Mayor a 3 caracteres.
+si no es valido seria menor a 3 caracteres.
+    - para correo
+no se uso validacion de regex
+       - si es valido seria Es Igual y Mayor a 6 Caracteres.
+       - si no es valido seria menor a 6 caracteres.
 
+Si todo se encuentra validado presentar? un mensaje:
+
+Si algo no es validado presentar? un mensaje:
+
+**Destacados o favs**
+- Se uso ruta /home/destacados para renderizar las cards que den favorito desde el home, y se guadan en el localstorage
 
 **Estilos**
 
-- Se valorará el estilado de demas apartados de la App (por fuera del estilado obligatorio de las rutas en base al theme)
+- Se uso el archivo light-theme.css para este proyecto.Los otros archivos .css se trato de crear un theme con la idea de que al dar click en el boton cargue un estilo u otro pero no se logr?.
 
-**Buenas Prácticas**
-
-- Se prestará especial atención al uso de buenas prácticas, mejoras de performance (implementando useMemo) y la reutilizacion de codigo
-
-## Funcionalidades
-
-
-## Desarrollo
 
 ## API
 
@@ -63,23 +72,24 @@ La estructura trat? de basarse en la plantilla original dada.
   - node_modules
   - public
     - logo-n-b.jpg
+    - logo-n.jpg
     - logoklinik.jpg
-    - profiledoctor.jpg
+    - doctor.jpg
   - src
     - componentes
-      -gen
+      -gen 
         - Card.jsx
         - Footer.jsx
         - Form.jsx
         - Navbar.jsx
       -utils
-        -context
-          -globalcontext.jsx
-          -logincontext.jsx
-          -themecontext.jsx
-        -Protected
-          -ProtectedRouter.jsx
-      -Login.jsx
+        - context
+          - favscontext.jsx
+          - logincontext.jsx
+          - themecontext.jsx
+        - Protected
+          - ProtectedRoute.jsx
+      - Login.jsx
     - navigate
       - Routes.js
     - routes
@@ -94,11 +104,12 @@ La estructura trat? de basarse en la plantilla original dada.
     - App.jsx
     - main.jsx
     - .gitignore
+    - index.html
     - package-lock.json
     - package.json
     - README.md
     - vite.config.js
-  - package-lock.json
+
 
 ### Sobre el formato de Entrega
 

@@ -22,12 +22,12 @@ const Navbar = () => {
 
 	return (
 		/* className={theme ? "dark" : "app"} */
-			<div className="Navbar">
+			<div className="navbar">
 				<img src="./logoklinik.jpg" alt="company-logo" />
 
 				<img src="./logo-n-b.jpg" alt="company-logo" />
 				<h5>DASHBOARD CLINIKA</h5>
-				<nav className="mul">
+				<nav className="navlinks">
 					<Link style={{ color: "gray" }} to="/home">
 						Home
 					</Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
 						Favoritos
 					</Link>
 				</nav>
-				<div className="icons">
+				<div className="navicons">
 					<DarkModeIcon
 						className="darkthemeicon"
 						alt="darkmodeicon"
